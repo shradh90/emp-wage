@@ -1,100 +1,41 @@
+package java2;
 
-
-
-
-
+import java.util.Scanner;
 
 public class empwage {
-	public static void main(String[] args) {
-		int is_full_time = 2;
-		int is_part_time = 1;
-		int emprateperhr = 20;
-       		int sum = 0;
-		for(int i = 0; i <= 30; i++) {
-
-			double empcheck = Math.floor(Math.random() * 10 ) % 3;
-			if(empcheck == is_full_time)
- 			{
-				int emphrs = 8;
-				int salary = (emphrs * emprateperhr);
-                           	sum = sum + salary;
-				System.out.println("salary = " + salary);
-			}
-			else if(empcheck == is_part_time)
-			{
-				int emphrs = 4;
-                        	int salary = (emphrs * emprateperhr);
-				sum = sum + salary;
-				System.out.println("salary = " + salary);
-			}
-			else 
-			{
-			int salary = 0;
-			sum =sum + salary;
-                        System.out.println("salary = " + salary);
-			}
-		}
- 	}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-public class empwage {
-	public static void main(String[] args) {
-		int is_full_time = 2;
-		int is_part_time = 1;
-		int emprateperhr = 20;
-		int empcheck = (int) (Math.floor(Math.random() * 10 )) % 3;
-		int emphrs;
-		int salary;
-		switch (empcheck) {
+	int is_full_time = 2;
+	int is_part_time = 1;
+	int emprateperhr = 20;
+	 System.out.println("enter number of workinf days :	");
+	 Scanner sc = new Scanner(System.in);
+   	 int d = sc.nextInt();
+   	 System.out.println("enter number of working hrs in month :	");
+	 Scanner sc1 = new Scanner(System.in);
+   	 int h = sc1.nextInt();
+   	 int sum = 0;
+   	 int totalworkingdays;
+   	 int emphrs = 0;
+   	 while((sum <= h) && (totalworkingdays < d)) {
+   		for(int i = 0; i < 30; i++) {
+            totalworkingdays++;
+			int empcheck = (int) (Math.floor(Math.random() * 10 ) % 3);
+			switch (empcheck) {
 			  case 0:
 			     	emphrs = 0;
-                             	break;
+                           	break;
 		 	  case 1:
 			     	emphrs = 4;
-                             	break; 		 
- 		          case 2:
+                           	break; 		 
+		          case 2:
 			     	emphrs = 8;
 				break;
-     		}
- 		salary = (emphrs * emprateperhr);
-                System.out.println("salary = " + salary);
-
+			}
+			int salary = (emphrs * emprateperhr);
+			sum =sum + salary; 
+                        
+		}
+		System.out.println("toyal salary = " + sum);
+		
  	}
+   	 }
 }
-
-
-
-
-
-
-
-
-
