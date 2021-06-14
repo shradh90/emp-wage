@@ -4,7 +4,7 @@ public class empwage {
 		int is_part_time = 1;
 		int emprateperhr = 20;
 		int empcheck = (int) (Math.floor(Math.random() * 10 )) % 3;
-		int emphrs;
+		int emphrs = 0;
 		int salary;
 		switch (empcheck) {
 			  case 0:
