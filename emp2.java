@@ -18,13 +18,13 @@ public class EmpWage {
 		if(empCheck == IS_FULL_TIME)
  		{
 			System.out.println("employee is present");
-			int salary = (emphrs * empwagePerHour);
-			System.out.println("salary = " + salary);
+			int salary = (emphrs * empwagePerHour); //it will calculate salary when employee is present full day
+			System.out.println("salary = " + salary); //print the salary
 		}
 		else
 		{
 			System.out.println("employee is absent");
-			int salary = 0;
+			int salary = 0; //when employee is absent salary is zero
 			System.out.println("salary = " + salary);
 		}
 		
